@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useFetch } from '../hooks/useFetch'
+import { useFetch } from '../Hooks/useFetch'
 import { useApp } from '../context/AppContext'
-import { useTrailer } from '../hooks/useTrailer'
+import { useTrailer } from '../Hooks/useTrailer'
 import { useState } from 'react'
 
 function MovieDetail() {

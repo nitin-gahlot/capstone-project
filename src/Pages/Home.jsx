@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { useFetch } from '../hooks/useFetch'
-import HeroBanner from '../components/HeroBanner'
-import MovieCard from '../components/MovieCard'
-import SkeletonBanner from '../components/SkeletonBanner'
-import SkeletonRow from '../components/SkeletonRow'
+import { useFetch } from '../Hooks/useFetch'
+import HeroBanner from '../Components/HeroBanner'
+import MovieCard from '../Components/MovieCard'
+import SkeletonBanner from '../Components/SkeletonBanner'
+import SkeletonRow from '../Components/SkeletonRow'
 
 const GENRES = [
   { name: 'All', id: null },
@@ -31,6 +31,7 @@ function Home() {
 
   useEffect(() => {
     if (activeGenre.id === null) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setGenreMovies([])
       return
     }
@@ -44,7 +45,7 @@ function Home() {
         setGenreLoading(false)
       })
       .catch(() => setGenreLoading(false))
-  }, [activeGenre])
+  }, [activeGenre, API_KEY])
 
   return (
     <div style={{ background: 'var(--bg-primary)', minHeight: '100vh' }}>

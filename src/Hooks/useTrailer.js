@@ -8,9 +8,12 @@ export function useTrailer(movieId) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if (!movieId) return
+    if (!movieId) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLoading(false)
+      return
+    }
 
-    setLoading(true)
     fetch(`${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}&language=en-US`)
       .then(res => res.json())
       .then(data => {

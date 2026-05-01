@@ -49,4 +49,7 @@ export function AppProvider({ children }) {
   )
 }
 
-export const useApp = () => useContext(AppContext)
+// eslint-disable-next-line react-refresh/only-export-components
+export function useApp() {
+  return useContext(AppContext)
+}

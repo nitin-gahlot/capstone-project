@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { useFetch } from '../hooks/useFetch'
-import MovieCard from '../components/MovieCard'
+import { useFetch } from '../Hooks/useFetch'
+import MovieCard from '../Components/MovieCard'
 
 function Movies() {
   const [search, setSearch] = useState('')

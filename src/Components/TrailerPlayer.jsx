@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useTrailer } from '../hooks/useTrailer'
+import { useTrailer } from '../Hooks/useTrailer'
 
 function TrailerPlayer({ movieId, movieTitle, buttonStyle }) {
   const { trailerKey, loading } = useTrailer(movieId)
